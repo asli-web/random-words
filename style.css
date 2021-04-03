@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: monospace;
+}
+body {
+	height: 100vh;
+	background-color: rgb(169 204 255);
+	width: 100%;
+	font-family: "New Tegomin", serif;
+}
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+	color: rgb(247, 246, 247);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	width: 50%;
+	transform: translate(-50%, -30%);
+	font-family: "New Tegomin", serif;
+	font-weight: bold;
+
+	text-shadow: 0 0 2px rgb(195, 43, 226);
+}
+.head {
+	/* 
+	background-color: rgb(192, 182, 197); */
+
+	min-height: 15vh;
+	position: relative;
+
+	align-items: center;
+}
+h3 {
+	font-family: "New Tegomin", serif;
+	margin-top: 50px;
+	color: rgb(60, 60, 60);
+	text-align: center;
+}
+.container {
+	display: grid;
+	grid-template-columns: 60% 20% 20%;
+	grid-template-rows: 50px auto;
+	width: 50%;
+	border: 1px solid rgb(99, 64, 224);
+	left: 50%;
+	padding: 3px;
+	margin-top: 50px;
+
+	position: relative;
+	transform: translate(-50%);
+	align-items: center;
+	background-color: whitesmoke;
+	border-radius: 10px;
+}
+.container > *:not(h4) {
+	height: 100%;
+	width: 100%;
+}
+.container > * {
+	padding: 0px 3px;
+}
+.container h4 {
+	color: rgb(161, 143, 161);
+	font-family: "New Tegomin", serif;
+	font-size: 14px;
+	text-align: justify;
+	padding-left: 4px;
+	padding-right: 10px;
+}
+
+.show {
+	display: grid;
+	grid-column: 1 / span 3;
+	border-top: 1px solid rgb(99, 64, 224);
+	padding: 10px 0 10px 15px;
+}
+button {
+	border: none;
+	border-radius: 7px;
+	word-break: break-all;
+}
+input {
+	border: none;
+	text-align: center;
+}
+button:focus,
+input:focus {
+	outline: none;
+}
+button:hover {
+	background-color: rgba(40, 67, 219, 0.233);
+}
+.anim {
+	position: absolute;
+	margin: auto;
+	bottom: 0;
+
+	width: 100%;
+	height: max-content;
+}
+svg text {
+	left: 50%;
+}
+
+@media screen and (max-width: 700px) {
+	.head {
+		min-height: 16vh;
+	}
+	.button {
+		word-break: break-word;
+	}
+}
