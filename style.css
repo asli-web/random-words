@@ -115,4 +115,10 @@ svg text {
 	.button {
 		word-break: break-word;
 	}
+	.container {
+		grid-template-rows: 64px auto;
+	}
+	.container h4 {
+		text-align: left;
+	}
 }
