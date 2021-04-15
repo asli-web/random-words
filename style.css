@@ -1,8 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
 
 * {
 	margin: 0;
 	padding: 0;
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	font-family: monospace;
 }
@@ -21,6 +29,8 @@ h1 {
 	left: 50%;
 	position: absolute;
 	width: 50%;
+	-webkit-transform: translate(-50%, -30%);
+	-ms-transform: translate(-50%, -30%);
 	transform: translate(-50%, -30%);
 	font-family: "New Tegomin", serif;
 	font-weight: bold;
@@ -34,6 +44,10 @@ h1 {
 	min-height: 15vh;
 	position: relative;
 
+	-webkit-box-align: center;
+
+	-ms-flex-align: center;
+
 	align-items: center;
 }
 h3 {
@@ -43,8 +57,11 @@ h3 {
 	text-align: center;
 }
 .container {
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-columns: 60% 20% 20%;
 	grid-template-columns: 60% 20% 20%;
+	-ms-grid-rows: 50px auto;
 	grid-template-rows: 50px auto;
 	width: 50%;
 	border: 1px solid rgb(99, 64, 224);
@@ -53,11 +70,16 @@ h3 {
 	margin-top: 50px;
 
 	position: relative;
+	-webkit-transform: translate(-50%);
+	-ms-transform: translate(-50%);
 	transform: translate(-50%);
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
 	background-color: whitesmoke;
 	border-radius: 10px;
 }
+
 .container > *:not(h4) {
 	height: 100%;
 	width: 100%;
@@ -75,7 +97,10 @@ h3 {
 }
 
 .show {
+	display: -ms-grid;
 	display: grid;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 3;
 	grid-column: 1 / span 3;
 	border-top: 1px solid rgb(99, 64, 224);
 	padding: 10px 0 10px 15px;
@@ -102,6 +127,8 @@ button:hover {
 	bottom: 0;
 
 	width: 100%;
+	height: -webkit-max-content;
+	height: -moz-max-content;
 	height: max-content;
 }
 svg text {
@@ -116,7 +143,8 @@ svg text {
 		word-break: break-word;
 	}
 	.container {
-		grid-template-rows: 64px auto;
+		-ms-grid-rows: auto;
+		grid-template-rows: auto;
 	}
 	.container h4 {
 		text-align: left;
